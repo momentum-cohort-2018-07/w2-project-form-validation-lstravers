@@ -3,22 +3,22 @@ console.log('Add validation!');
 document.getElementById('parking-form').addEventListener('submit', function (event) {
     event.preventDefault()
 
-    var field = document.getElementById('name').value.trim()
+    var name = document.getElementById('name').value.trim()
     // var car
-    startDateField = document.getElementById('start-date').value.trim()
+    var startDate = document.getElementById('start-date').value.trim()
     //daysField = document.getElementById('days').value.trim()
     //creditCardField = document.getElementById('credit-card').value.trim()
     //cvvField = document.getElementById('cvv').value.trim()
     //expirationField = document.getElementById('expiration').value.trim()
 
-    if (field === "") {                       //NAME FIELD
+    if (name === "") {                      
         showEmptyNameFieldError()
     }
-/*
-    if (startDateField === "") {             //START DATE FIELD
+
+    if (startDate === "") {            
         showEmptyStartDateFieldError()
     }
-
+/*
     if (daysField === "") {
         show
     }
@@ -44,12 +44,12 @@ function showEmptyNameFieldError() {
 }
 //CAR MAKE-MODEL-FIELD
 
-//DATE PARKING
+//START DATE
 function showEmptyStartDateFieldError() {
     var errorDiv = document.createElement('div')
     errorDiv.classList.add('input-invalid')
-    var startDateField = document.getElementById('start-date')
-    startDateField.classList.add('input-invalid')
+    var startDate = document.getElementById('start-date')
+    startDate.classList.add('input-invalid')
 }
 
 //NUMBER OF DAYS
