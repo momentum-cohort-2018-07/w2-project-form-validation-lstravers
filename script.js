@@ -3,30 +3,55 @@ console.log('Add validation!');
 document.getElementById('parking-form').addEventListener('submit', function (event) {
     event.preventDefault()
 
-    var name = document.getElementById('name').value.trim()
+    var field = document.getElementById('name').value.trim()
 
-    if (name === "") {
-        showEmptyFieldError()
+    if (field === "") {
+        showEmptyNameFieldError()
     }
-}
-)
-function showEmptyFieldError() {
+
+    var daysField = document.getElementById('days-field').value.trim()
+
+    if (daysField === "") {
+        showEmptyDaysFieldError()
+    }
+})
+//NAME FIELD
+function showEmptyNameFieldError() {
     var errorDiv = document.createElement('div')
     errorDiv.classList.add('input-invalid')
-    var field = document.getElementById('parking-form')
-    // field.parentElement.appendChild(errorDiv)
+    var field = document.getElementById('name-field')
+    field.classList.add('input-invalid')
+}
+//CAR MAKE-MODEL-FIELD
+
+//DATE PARKING
+
+//NUMBER OF DAYS
+function showEmptyDaysFieldError() {
+    var errorDiv = document.createElement('div')
+    errorDiv.classList.add('input-invalid')
+    var field = document.getElementById('days-field')
     field.classList.add('input-invalid')
 }
 
+//CREDIT CARD
+
+//CVV
+
+//EXPIRATION
+
+
+/*
 document.getElementById('parking-form').addEventListener('submit', function (event) {
     var inputElements = document.getElementsByTagName ('input')
     for (var input of inputElements) {
         if(input.value.trim() === ('')
 }
 
+*/
 //function showError(){
-//    var 
-
+// use forEach on the node list to loop througth the array
+// field.parentElement.appendChild(errorDiv)
 
 
    // clearError()
